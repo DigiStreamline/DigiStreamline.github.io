@@ -64,6 +64,18 @@
       background-size: 256px 256px;
     }
 
+    /* ===== UNIFORM SECTION SPACING ===== */
+    section {
+      position: relative;
+      padding: 7rem 0; /* Ensures perfectly equal gaps */
+    }
+
+    @media(max-width: 767px) {
+      section {
+        padding: 5rem 0;
+      }
+    }
+
     /* ===== PAGE LOADER ===== */
     #page-loader {
       position: fixed;
@@ -151,49 +163,23 @@
     }
 
     @keyframes loader-fill {
-      0% {
-        width: 0%
-      }
-
-      60% {
-        width: 80%
-      }
-
-      100% {
-        width: 100%
-      }
+      0% { width: 0% }
+      60% { width: 80% }
+      100% { width: 100% }
     }
 
     @keyframes loader-pulse {
-
-      0%,
-      100% {
-        filter: drop-shadow(0 0 8px rgba(112, 230, 222, 0.3))
-      }
-
-      50% {
-        filter: drop-shadow(0 0 20px rgba(112, 230, 222, 0.6))
-      }
+      0%, 100% { filter: drop-shadow(0 0 8px rgba(112, 230, 222, 0.3)) }
+      50% { filter: drop-shadow(0 0 20px rgba(112, 230, 222, 0.6)) }
     }
 
     @keyframes loader-blink {
-
-      0%,
-      100% {
-        opacity: 0.5
-      }
-
-      50% {
-        opacity: 1
-      }
+      0%, 100% { opacity: 0.5 }
+      50% { opacity: 1 }
     }
 
     /* TYPOGRAPHY */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
+    h1, h2, h3, h4, h5 {
       font-family: var(--font-display);
       color: var(--text-primary);
       line-height: 1.15;
@@ -236,10 +222,6 @@
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 2rem
-    }
-
-    section {
-      padding: 8rem 0
     }
 
     .glass-card {
@@ -300,15 +282,8 @@
     }
 
     @keyframes glow-pulse {
-
-      0%,
-      100% {
-        box-shadow: 0 0 16px rgba(112, 230, 222, 0.25)
-      }
-
-      50% {
-        box-shadow: 0 0 32px rgba(112, 230, 222, 0.5)
-      }
+      0%, 100% { box-shadow: 0 0 16px rgba(112, 230, 222, 0.25) }
+      50% { box-shadow: 0 0 32px rgba(112, 230, 222, 0.5) }
     }
 
     /* ===== NAV ===== */
@@ -343,28 +318,6 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
-    }
-
-    .logo-mark {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, #12111A, #2C1A40);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(112, 230, 222, 0.2);
-      box-shadow: 0 0 18px rgba(112, 230, 222, 0.2);
-    }
-
-    .logo-mark span {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 14px;
-      background: linear-gradient(180deg, #fff 0%, #F0C4FF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
     .logo-text {
@@ -451,14 +404,8 @@
     }
 
     @keyframes mobile-nav-in {
-      from {
-        opacity: 0;
-        transform: translateY(-10px)
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0)
-      }
+      from { opacity: 0; transform: translateY(-10px) }
+      to { opacity: 1; transform: translateY(0) }
     }
 
     .mobile-nav.open {
@@ -570,16 +517,9 @@
     }
 
     @keyframes blob-drift {
-      0%,
-      100% {
-        transform: translate(0, 0)
-      }
-      33% {
-        transform: translate(20px, -15px)
-      }
-      66% {
-        transform: translate(-15px, 20px)
-      }
+      0%, 100% { transform: translate(0, 0) }
+      33% { transform: translate(20px, -15px) }
+      66% { transform: translate(-15px, 20px) }
     }
 
     .hero-inner {
@@ -673,13 +613,8 @@
     }
 
     @keyframes bounce {
-      0%,
-      100% {
-        transform: translateY(0)
-      }
-      50% {
-        transform: translateY(6px)
-      }
+      0%, 100% { transform: translateY(0) }
+      50% { transform: translateY(6px) }
     }
 
     /* Hero right */
@@ -722,17 +657,9 @@
       border-radius: 50%
     }
 
-    .dot-green {
-      background: var(--brand-primary)
-    }
-
-    .dot-yellow {
-      background: #FFD700
-    }
-
-    .dot-red {
-      background: #FF5F57
-    }
+    .dot-green { background: var(--brand-primary) }
+    .dot-yellow { background: #FFD700 }
+    .dot-red { background: #FF5F57 }
 
     .metrics-title {
       font-family: var(--font-display);
@@ -752,9 +679,7 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
 
-    .metrics-row:last-child {
-      border-bottom: none
-    }
+    .metrics-row:last-child { border-bottom: none }
 
     .metric-label {
       font-size: 0.82rem;
@@ -780,9 +705,7 @@
       letter-spacing: -0.01em;
     }
 
-    .metric-val.green {
-      color: var(--brand-secondary)
-    }
+    .metric-val.green { color: var(--brand-secondary) }
 
     .tech-chips {
       display: flex;
@@ -834,28 +757,16 @@
     }
 
     @keyframes float-y {
-      0%,
-      100% {
-        transform: translateY(0)
-      }
-      50% {
-        transform: translateY(-8px)
-      }
+      0%, 100% { transform: translateY(0) }
+      50% { transform: translateY(-8px) }
     }
 
     @keyframes fade-up {
-      from {
-        opacity: 0;
-        transform: translateY(24px)
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0)
-      }
+      from { opacity: 0; transform: translateY(24px) }
+      to { opacity: 1; transform: translateY(0) }
     }
 
     /* ===== CLOUD LOGOS STRIP ===== */
-
     .tech-header {
       text-align: center;
       margin-bottom: 3rem;
@@ -906,10 +817,7 @@
       -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
     }
 
-    .pills-row {
-      overflow: hidden;
-      width: 100%;
-    }
+    .pills-row { overflow: hidden; width: 100%; }
 
     .pills-track {
       display: flex;
@@ -918,9 +826,7 @@
       animation: pills-left 25s linear infinite;
     }
 
-    .pills-track.reverse {
-      animation: pills-right 25s linear infinite;
-    }
+    .pills-track.reverse { animation: pills-right 25s linear infinite; }
 
     .pills-track:hover,
     .pills-track.reverse:hover {
@@ -965,67 +871,13 @@
     }
 
     @keyframes pills-left {
-      from {
-        transform: translateX(0)
-      }
-      to {
-        transform: translateX(-50%)
-      }
+      from { transform: translateX(0) }
+      to { transform: translateX(-50%) }
     }
 
     @keyframes pills-right {
-      from {
-        transform: translateX(-50%)
-      }
-      to {
-        transform: translateX(0)
-      }
-    }
-
-    /* ===== MARQUEE ===== */
-    .marquee-section {
-      background: rgba(112, 230, 222, 0.04);
-      border-top: 1px solid rgba(112, 230, 222, 0.12);
-      border-bottom: 1px solid rgba(112, 230, 222, 0.12);
-      padding: 1rem 0;
-      overflow: hidden;
-    }
-
-    .marquee-track {
-      display: flex;
-      gap: 0;
-      white-space: nowrap;
-      animation: marquee 30s linear infinite;
-    }
-
-    .marquee-track:hover {
-      animation-play-state: paused
-    }
-
-    .marquee-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 0 2rem;
-      font-size: 0.85rem;
-      font-family: var(--font-display);
-      font-weight: 600;
-      color: var(--text-secondary);
-      letter-spacing: 0.04em;
-    }
-
-    .marquee-item .dot-sep {
-      color: var(--brand-primary);
-      font-size: 1.2rem
-    }
-
-    @keyframes marquee {
-      from {
-        transform: translateX(0)
-      }
-      to {
-        transform: translateX(-50%)
-      }
+      from { transform: translateX(-50%) }
+      to { transform: translateX(0) }
     }
 
     /* ===== SERVICES ===== */
@@ -1078,13 +930,8 @@
       transform: translateY(-8px);
     }
 
-    .service-card:hover::before {
-      opacity: 1
-    }
-
-    .service-card:hover::after {
-      opacity: 1
-    }
+    .service-card:hover::before { opacity: 1 }
+    .service-card:hover::after { opacity: 1 }
 
     .card-num {
       position: absolute;
@@ -1130,489 +977,373 @@
       font-weight: 400;
     }
 
-    /* ===== PROCESS TIMELINE ===== */
-    .process-timeline {
-      margin-top: 4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-    }
-
-    .process-item {
-      display: grid;
-      grid-template-columns: 120px 48px 1fr;
-      align-items: flex-start;
-      gap: 0;
-      min-height: 140px;
-    }
-
-    .process-left {
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 1.5rem;
-      padding-top: 1.2rem;
-    }
-
-    .process-num-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .process-num {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(18, 17, 26, 0.9);
-      border: 1.5px solid rgba(112, 230, 222, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--brand-primary);
-      position: relative;
-      z-index: 2;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 0 rgba(112, 230, 222, 0);
-    }
-
-    .process-item:hover .process-num {
-      border-color: var(--brand-primary);
-      box-shadow: 0 0 28px rgba(112, 230, 222, 0.4);
-      background: rgba(112, 230, 222, 0.08);
-    }
-
-    .process-num-glow {
-      position: absolute;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(112, 230, 222, 0.2) 0%, transparent 70%);
-      filter: blur(8px);
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .process-item:hover .process-num-glow {
-      opacity: 1;
-    }
-
-    .process-line-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 1.4rem;
-    }
-
-    .process-line-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--brand-primary);
-      flex-shrink: 0;
-      box-shadow: 0 0 12px rgba(112, 230, 222, 0.5);
-      position: relative;
-      z-index: 2;
-      transition: transform 0.3s;
-    }
-
-    .process-item:hover .process-line-dot {
-      transform: scale(1.4);
-    }
-
-    .process-line-track {
-      width: 1.5px;
-      flex: 1;
-      min-height: 80px;
-      background: linear-gradient(180deg, rgba(112, 230, 222, 0.4) 0%, rgba(112, 230, 222, 0.08) 100%);
-      margin-top: 6px;
-    }
-
-    .process-line-track.last {
-      background: linear-gradient(180deg, rgba(112, 230, 222, 0.4) 0%, transparent 100%);
-      min-height: 40px;
-      flex: 0;
-    }
-
-    .process-right {
-      padding: 0 0 2.5rem 1.5rem;
-    }
-
-    .process-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(112, 230, 222, 0.1);
-      border-radius: 18px;
-      padding: 1.8rem 2rem;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* =====SCROLL TIMELINE PROCESS ===== */
+    #process {
+      background: var(--bg-deep);
       position: relative;
       overflow: hidden;
     }
+    
+    .process-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 4rem auto 0;
+      padding: 0 2rem;
+    }
 
-    .process-card::before {
-      content: '';
+    .timeline-track {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .timeline-fill {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+      width: 100%;
+      height: 0%; 
+      background: linear-gradient(180deg, var(--brand-primary), var(--brand-secondary));
+      box-shadow: 0 0 15px var(--brand-primary);
+      transition: height 0.1s ease-out;
+    }
+
+    .step-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      padding: 3rem 0;
+      position: relative;
+      width: 50%;
       opacity: 0;
-      transition: opacity 0.4s;
+      transform: translateY(60px);
+      transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-    .process-item:hover .process-card {
-      border-color: rgba(112, 230, 222, 0.3);
-      background: rgba(112, 230, 222, 0.04);
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(112, 230, 222, 0.05);
-      transform: translateX(8px);
+    .step-wrapper:nth-child(even) {
+      margin-left: 50%;
+      justify-content: flex-start;
     }
 
-    .process-item:hover .process-card::before {
+    .step-wrapper.visible {
       opacity: 1;
+      transform: translateY(0);
     }
 
-    .process-card-tag {
-      font-size: 10px;
+    .step-dot {
+      position: absolute;
+      right: -10px; 
+      top: 50%;
+      transform: translateY(-50%) scale(0.5);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--bg-deep);
+      border: 3px solid rgba(255,255,255,0.2);
+      z-index: 2;
+      transition: all 0.5s ease;
+    }
+
+    .step-wrapper:nth-child(even) .step-dot {
+      left: -10px;
+      right: auto;
+    }
+
+    .step-wrapper.visible .step-dot {
+      transform: translateY(-50%) scale(1);
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 20px var(--brand-primary);
+      background: var(--brand-primary);
+    }
+
+    .step-wrapper:nth-child(even).visible .step-dot {
+      border-color: var(--brand-secondary);
+      box-shadow: 0 0 20px var(--brand-secondary);
+      background: var(--brand-secondary);
+    }
+
+    .step-card {
+      width: 85%;
+      background: rgba(18, 17, 26, 0.6);
+      border: 1px solid rgba(112, 230, 222, 0.1);
+      padding: 2.5rem;
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: all 0.4s ease;
+    }
+    
+    .step-bg-num {
+      position: absolute;
+      top: -20px;
+      right: -10px;
       font-family: var(--font-display);
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--brand-primary);
-      margin-bottom: 0.6rem;
-      display: block;
-      opacity: 0.7;
+      font-size: 8rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.02);
+      line-height: 1;
+      z-index: 0;
+      pointer-events: none;
+      transition: color 0.5s ease;
     }
 
-    .process-card h3 {
-      font-size: 1.25rem;
+    .step-wrapper.visible .step-bg-num {
+      color: rgba(112, 230, 222, 0.05);
+    }
+    .step-wrapper:nth-child(even).visible .step-bg-num {
+      color: rgba(194, 97, 245, 0.05);
+      left: -10px;
+      right: auto;
+    }
+
+    .step-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-card:hover {
+      border-color: rgba(112, 230, 222, 0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(112,230,222,0.05);
+    }
+    .step-wrapper:nth-child(even) .step-card:hover {
+      border-color: rgba(194, 97, 245, 0.4);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 20px rgba(194,97,245,0.05);
+    }
+
+    .step-card h3 {
+      font-size: 1.4rem;
       font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
     }
 
-    .process-card p {
-      font-size: 0.92rem;
+    .step-card p {
+      font-size: 0.95rem;
       line-height: 1.7;
       color: var(--text-secondary);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
-
-    .process-card-footer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .process-pill {
-      font-size: 11px;
-      font-family: var(--font-display);
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 100px;
-      background: rgba(112, 230, 222, 0.07);
-      border: 1px solid rgba(112, 230, 222, 0.18);
-      color: var(--brand-primary);
-      letter-spacing: 0.04em;
-    }
-
-    /* Responsive */
+    
     @media(max-width: 767px) {
-      .process-item {
-        grid-template-columns: 0 32px 1fr;
-      }
-      .process-left {
-        display: none;
-      }
-      .process-card {
-        padding: 1.4rem;
-      }
-      .process-item:hover .process-card {
-        transform: translateX(4px);
-      }
+      .timeline-track { left: 20px; }
+      .step-wrapper { width: 100%; padding: 2rem 0 2rem 40px; justify-content: flex-start; }
+      .step-wrapper:nth-child(even) { margin-left: 0; }
+      .step-dot, .step-wrapper:nth-child(even) .step-dot { left: 10px; right: auto; }
+      .step-card { width: 100%; padding: 1.8rem; }
+      .step-bg-num { font-size: 5rem; top: 10px; right: 10px; }
+      .step-wrapper:nth-child(even).visible .step-bg-num { right: 10px; left: auto; }
     }
 
-    /* ===== WHY US ===== */
-    #why {
-      background: linear-gradient(180deg, var(--bg-deep) 0%, #0E0D16 100%)
+    /* ===== JAW-DROPPING ABOUT SECTION ===== */
+    #about-epic {
+      position: relative;
+      background: var(--bg-deep);
+      overflow: hidden;
+      z-index: 1;
     }
 
-    .why-inner {
+    .about-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: -1;
+      animation: float-orb 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .orb-cyan {
+      width: 400px;
+      height: 400px;
+      background: rgba(112, 230, 222, 0.15);
+      top: 10%;
+      left: -10%;
+    }
+
+    .orb-purple {
+      width: 500px;
+      height: 500px;
+      background: rgba(194, 97, 245, 0.12);
+      bottom: -10%;
+      right: -5%;
+      animation-delay: -6s;
+    }
+
+    @keyframes float-orb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-30px, 50px) scale(0.9); }
+    }
+
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 6rem;
       align-items: center;
     }
 
-    .stats-block {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+    .about-visuals {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      perspective: 1000px;
     }
 
-    .stat-item {
-      background: rgba(18, 17, 26, 0.55);
-      border: 1px solid rgba(112, 230, 222, 0.1);
-      border-radius: 18px;
-      padding: 1.8rem;
-      transition: all 0.3s;
+    .glass-panel {
+      position: absolute;
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      overflow: hidden;
     }
 
-    .stat-item:hover {
-      border-color: rgba(112, 230, 222, 0.3);
-      box-shadow: 0 0 32px rgba(112, 230, 222, 0.08);
-      transform: translateY(-4px);
+    .panel-back {
+      width: 80%;
+      height: 70%;
+      top: 5%;
+      right: 0;
+      background: linear-gradient(135deg, rgba(194, 97, 245, 0.1), rgba(18, 17, 26, 0.8));
+      transform: translateZ(-100px) rotateY(10deg);
+      border-color: rgba(194, 97, 245, 0.2);
     }
 
-    .stat-num {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--brand-primary);
-      text-shadow: 0 0 20px rgba(112, 230, 222, 0.3);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.04em;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      font-weight: 500;
-    }
-
-    .diff-list {
-      list-style: none;
+    .panel-front {
+      width: 85%;
+      height: 80%;
+      bottom: 0;
+      left: 0;
+      background: rgba(18, 17, 26, 0.65);
+      border: 1px solid rgba(112, 230, 222, 0.2);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(112, 230, 222, 0.1);
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .diff-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-    }
-
-    .diff-check {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: rgba(194, 97, 245, 0.1);
-      border: 1px solid rgba(194, 97, 245, 0.3);
-      display: flex;
-      align-items: center;
       justify-content: center;
-      flex-shrink: 0;
-      font-size: 11px;
-      color: var(--brand-secondary);
-      margin-top: 2px;
+      padding: 3rem;
+      transform: translateZ(50px) rotateY(5deg);
     }
 
-    /* ===== TESTIMONIALS ===== */
-    #testimonials {
-      background: #0E0D16
+    .about-visuals:hover .panel-front {
+      transform: translateZ(80px) rotateY(0deg) scale(1.02);
+      border-color: rgba(112, 230, 222, 0.5);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(112, 230, 222, 0.2);
     }
 
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
+    .about-visuals:hover .panel-back {
+      transform: translateZ(-150px) rotateY(15deg) scale(0.95);
+      opacity: 0.6;
     }
 
-    .testi-card {
-      background: rgba(18, 17, 26, 0.55);
-      border: 1px solid rgba(112, 230, 222, 0.1);
-      border-radius: 18px;
-      backdrop-filter: blur(20px);
-      padding: 2rem;
-      position: relative;
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .testi-card:hover {
-      box-shadow: 0 0 40px rgba(112, 230, 222, 0.1);
-      transform: translateY(-6px);
-      border-color: rgba(112, 230, 222, 0.25);
-    }
-
-    .quote-mark {
-      font-family: var(--font-serif);
-      font-size: 4rem;
-      line-height: 0.6;
-      color: var(--brand-primary);
-      opacity: 0.35;
-      margin-bottom: 0.8rem;
-      display: block;
-      font-style: italic;
-    }
-
-    .testi-text {
-      font-size: 0.9rem;
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-      color: var(--text-secondary);
-      font-style: italic;
-      font-family: var(--font-serif);
-    }
-
-    .stars {
-      color: #FFD700;
-      font-size: 14px;
-      margin-bottom: 1rem;
-      letter-spacing: 2px
-    }
-
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 10px
-    }
-
-    .avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 13px;
-      flex-shrink: 0;
-    }
-
-    .author-name {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-    }
-
-    .author-role {
-      font-size: 0.78rem;
-      color: var(--text-secondary)
-    }
-
-    /* ===== PRICING ===== */
-    #pricing {
-      background: var(--bg-deep)
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
-      align-items: start;
-    }
-
-    .pricing-card {
-      background: rgba(18, 17, 26, 0.55);
-      border: 1px solid rgba(112, 230, 222, 0.1);
-      border-radius: 22px;
-      padding: 2.2rem;
-      position: relative;
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 40px rgba(112, 230, 222, 0.08);
-    }
-
-    .pricing-card.popular {
-      border-color: var(--brand-primary);
-      box-shadow: 0 0 56px rgba(112, 230, 222, 0.12);
-      transform: scale(1.02);
-    }
-
-    .pricing-card.popular:hover {
-      transform: scale(1.02) translateY(-6px);
-    }
-
-    .popular-badge {
+    .panel-float {
       position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--brand-primary);
-      color: var(--bg-deep);
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 11px;
-      padding: 5px 16px;
-      border-radius: 100px;
-      letter-spacing: 0.06em;
-      white-space: nowrap;
+      width: auto;
+      top: 40%;
+      right: -10%;
+      background: rgba(11, 10, 16, 0.85);
+      border: 1px solid var(--brand-secondary);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      transform: translateZ(100px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      animation: float-y 4s ease-in-out infinite;
     }
 
-    .pricing-tier {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: var(--text-secondary);
+    .panel-float h4 {
+      font-size: 2rem;
+      color: var(--brand-secondary);
+      margin-bottom: 0.2rem;
+      line-height: 1;
+    }
+    
+    .panel-float p {
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
+      margin: 0;
     }
 
-    .pricing-price {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
+    .about-content h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
       font-weight: 900;
-      color: var(--text-primary);
-      margin-bottom: 0.3rem;
-      letter-spacing: -0.04em;
-    }
-
-    .pricing-price span {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      font-weight: 400;
-      letter-spacing: 0
-    }
-
-    .pricing-sub {
-      font-size: 0.82rem;
-      color: var(--text-secondary);
+      line-height: 1.1;
       margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(112, 230, 222, 0.1);
     }
 
-    .pricing-features {
-      list-style: none;
+    .about-content p.lead {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .feature-list {
       display: flex;
       flex-direction: column;
-      gap: 0.7rem;
-      margin-bottom: 2rem;
+      gap: 1.5rem;
     }
 
-    .pricing-features li {
+    .feature-item {
       display: flex;
+      gap: 1.5rem;
       align-items: flex-start;
-      gap: 8px;
-      font-size: 0.88rem;
-      color: var(--text-secondary);
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid transparent;
+      transition: all 0.4s ease;
     }
 
-    .feature-check {
-      color: var(--brand-secondary);
-      font-size: 13px;
-      flex-shrink: 0;
-      margin-top: 2px
+    .feature-item:hover {
+      background: rgba(112, 230, 222, 0.05);
+      border-color: rgba(112, 230, 222, 0.2);
+      transform: translateX(10px);
     }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(112, 230, 222, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-primary);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .feature-item:nth-child(2) .feature-icon {
+      background: rgba(194, 97, 245, 0.1);
+      color: var(--brand-secondary);
+    }
+
+    .feature-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-text p {
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media(max-width: 1023px) {
+      .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+      .about-visuals { height: 500px; }
+      .panel-float { right: 5%; }
+    }
+
+    @media(max-width: 767px) {
+      .about-visuals { display: none; }
+    }
+
+    
 
     /* ===== FAQ ===== */
     #faq {
@@ -1691,7 +1422,6 @@
         var(--bg-deep);
       position: relative;
       overflow: hidden;
-      padding: 6rem 0;
     }
 
     #cta::before {
@@ -1957,15 +1687,8 @@
       background-clip: text;
     }
 
-    .text-center {
-      text-align: center
-    }
-
-    .section-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center
-    }
+    .text-center { text-align: center }
+    .section-center { display: flex; flex-direction: column; align-items: center }
 
     /* ===== SCROLL REVEAL ===== */
     .reveal {
@@ -1974,26 +1697,11 @@
       transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .reveal.revealed {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 {
-      transition-delay: 0.1s
-    }
-
-    .reveal-delay-2 {
-      transition-delay: 0.2s
-    }
-
-    .reveal-delay-3 {
-      transition-delay: 0.3s
-    }
-
-    .reveal-delay-4 {
-      transition-delay: 0.4s
-    }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s }
+    .reveal-delay-2 { transition-delay: 0.2s }
+    .reveal-delay-3 { transition-delay: 0.3s }
+    .reveal-delay-4 { transition-delay: 0.4s }
 
     .mobile-nav.open~nav,
     body.nav-open nav {
@@ -2003,457 +1711,23 @@
 
     /* ===== RESPONSIVE ===== */
     @media(max-width:1023px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-      .portfolio-card.large {
-        grid-row: span 1
-      }
-      .testi-grid {
-        grid-template-columns: 1fr 1fr
-      }
-      .pricing-grid {
-        grid-template-columns: 1fr
-      }
-      .pricing-card.popular {
-        transform: none
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr
-      }
-      .why-inner {
-        grid-template-columns: 1fr;
-        gap: 3rem
-      }
-      .stats-block {
-        grid-template-columns: repeat(2, 1fr)
-      }
+      .services-grid { grid-template-columns: repeat(2, 1fr) }
+      .testi-grid { grid-template-columns: 1fr 1fr }
+      .footer-grid { grid-template-columns: 1fr 1fr }
     }
 
     @media(max-width:767px) {
-      .nav-links,
-      .btn-primary.nav-cta {
-        display: none
-      }
-      .hamburger {
-        display: flex
-      }
-      .hero-inner {
-        grid-template-columns: 1fr;
-        padding: 7rem 1.5rem 4rem
-      }
-      .hero-right {
-        display: none
-      }
-      .services-grid {
-        grid-template-columns: 1fr
-      }
-      .portfolio-grid {
-        grid-template-columns: 1fr
-      }
-      .process-track {
-        flex-direction: column;
-        gap: 1rem
-      }
-      .process-connector {
-        display: none
-      }
-      .testi-grid {
-        grid-template-columns: 1fr
-      }
-      .footer-grid {
-        grid-template-columns: 1fr
-      }
-      .footer-bottom {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center
-      }
-      .cta-panel {
-        padding: 3rem 1.5rem
-      }
-      section {
-        padding: 4rem 0
-      }
+      .nav-links, .btn-primary.nav-cta { display: none }
+      .hamburger { display: flex }
+      .hero-inner { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem }
+      .hero-right { display: none }
+      .services-grid { grid-template-columns: 1fr }
+      .testi-grid { grid-template-columns: 1fr }
+      .footer-grid { grid-template-columns: 1fr }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center }
+      .cta-panel { padding: 3rem 1.5rem }
     }
 
-    .tech-section {
-      padding: 6rem 0 5rem;
-      overflow: hidden;
-    }
-
-    .tech-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .tech-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(112, 230, 222, 0.06);
-      border: 1px solid rgba(112, 230, 222, 0.2);
-      border-radius: 100px;
-      padding: 6px 16px;
-      font-size: 11px;
-      font-family: var(--font-display);
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: var(--text-secondary);
-      margin-bottom: 1.2rem;
-    }
-
-    .tech-badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--brand-primary);
-    }
-
-    .tech-heading {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .tech-carousel-wrap {
-      overflow: hidden;
-      width: 100%;
-      mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
-    }
-
-    .tech-carousel-track {
-      display: flex;
-      gap: 1.5rem;
-      width: max-content;
-      animation: tech-scroll 30s linear infinite;
-    }
-
-    .tech-carousel-track:hover {
-      animation-play-state: paused;
-    }
-
-    .tech-card {
-      width: 220px;
-      height: 110px;
-      background: #1A1924;
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-shrink: 0;
-      transition: background 0.3s, transform 0.3s;
-      cursor: default;
-    }
-
-    .tech-card:hover {
-      background: #232130;
-      transform: translateY(-4px);
-    }
-
-    .tech-card svg {
-      width: 40px;
-      height: 40px;
-      opacity: 0.75;
-      transition: opacity 0.3s;
-    }
-
-    .tech-card:hover svg {
-      opacity: 1;
-    }
-
-    .tech-card span {
-      font-size: 12px;
-      font-family: var(--font-display);
-      font-weight: 600;
-      color: var(--text-secondary);
-      letter-spacing: 0.03em;
-    }
-
-    @keyframes tech-scroll {
-      from {
-        transform: translateX(0)
-      }
-      to {
-        transform: translateX(-50%)
-      }
-    }
-
-    @media(max-width: 767px) {
-      .process-timeline {
-        margin-top: 2.5rem;
-      }
-      .process-item {
-        grid-template-columns: 28px 1fr;
-        gap: 0;
-      }
-      .process-left {
-        display: none;
-      }
-      .process-line-wrap {
-        padding-top: 1.6rem;
-        padding-right: 1rem;
-      }
-      .process-line-dot {
-        width: 8px;
-        height: 8px;
-      }
-      .process-right {
-        padding: 0 0 2rem 0;
-        min-width: 0;
-        width: 100%;
-      }
-      .process-card {
-        padding: 1.2rem 1.2rem;
-        border-radius: 14px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-      .process-card h3 {
-        font-size: 1.1rem;
-      }
-      .process-card p {
-        font-size: 0.88rem;
-      }
-      .process-card-footer {
-        gap: 6px;
-      }
-      .process-pill {
-        font-size: 10px;
-        padding: 4px 10px;
-      }
-      .process-item:hover .process-card {
-        transform: none;
-      }
-    }
-
-    @media(max-width: 767px) {
-      #process .container {
-        padding: 0 1.2rem;
-        overflow: hidden;
-      }
-    }
-
-
-
-
-
-    /* ===== ABOUT SECTION ===== */
-    #about-epic {
-      position: relative;
-      padding: 20rem 0;
-      background: var(--bg-deep);
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    /* Animated Background Orbs */
-    .about-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(100px);
-      z-index: -1;
-      animation: float-orb 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .orb-cyan {
-      width: 400px;
-      height: 400px;
-      background: rgba(112, 230, 222, 0.15);
-      top: 10%;
-      left: -10%;
-    }
-
-    .orb-purple {
-      width: 500px;
-      height: 500px;
-      background: rgba(194, 97, 245, 0.12);
-      bottom: -10%;
-      right: -5%;
-      animation-delay: -6s;
-    }
-
-    @keyframes float-orb {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(30px, -50px) scale(1.1); }
-      66% { transform: translate(-30px, 50px) scale(0.9); }
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-
-    /* Left: Glassmorphic Visual Stack */
-    .about-visuals {
-      position: relative;
-      width: 100%;
-      height: 600px;
-      perspective: 1000px;
-    }
-
-    .glass-panel {
-      position: absolute;
-      border-radius: 24px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-      overflow: hidden;
-    }
-
-    /* Back Panel */
-    .panel-back {
-      width: 80%;
-      height: 70%;
-      top: 5%;
-      right: 0;
-      background: linear-gradient(135deg, rgba(194, 97, 245, 0.1), rgba(18, 17, 26, 0.8));
-      transform: translateZ(-100px) rotateY(10deg);
-      border-color: rgba(194, 97, 245, 0.2);
-    }
-
-    /* Main Front Panel */
-    .panel-front {
-      width: 85%;
-      height: 80%;
-      bottom: 0;
-      left: 0;
-      background: rgba(18, 17, 26, 0.65);
-      border: 1px solid rgba(112, 230, 222, 0.2);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(112, 230, 222, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 3rem;
-      transform: translateZ(50px) rotateY(5deg);
-    }
-
-    .about-visuals:hover .panel-front {
-      transform: translateZ(80px) rotateY(0deg) scale(1.02);
-      border-color: rgba(112, 230, 222, 0.5);
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(112, 230, 222, 0.2);
-    }
-
-    .about-visuals:hover .panel-back {
-      transform: translateZ(-150px) rotateY(15deg) scale(0.95);
-      opacity: 0.6;
-    }
-
-    /* Floating Metric Card */
-    .panel-float {
-      position: absolute;
-      width: auto;
-      top: 40%;
-      right: -10%;
-      background: rgba(11, 10, 16, 0.85);
-      border: 1px solid var(--brand-secondary);
-      padding: 1.5rem 2rem;
-      border-radius: 16px;
-      transform: translateZ(100px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      animation: float-y 4s ease-in-out infinite;
-    }
-
-    .panel-float h4 {
-      font-size: 2rem;
-      color: var(--brand-secondary);
-      margin-bottom: 0.2rem;
-      line-height: 1;
-    }
-    
-    .panel-float p {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin: 0;
-    }
-
-    /* Right: Content */
-    .about-content h2 {
-      font-size: clamp(2.5rem, 4vw, 3.5rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-    }
-
-    .about-content p.lead {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
-    }
-
-    .feature-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .feature-item {
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-      padding: 1.5rem;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid transparent;
-      transition: all 0.4s ease;
-    }
-
-    .feature-item:hover {
-      background: rgba(112, 230, 222, 0.05);
-      border-color: rgba(112, 230, 222, 0.2);
-      transform: translateX(10px);
-    }
-
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(112, 230, 222, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--brand-primary);
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-
-    .feature-item:nth-child(2) .feature-icon {
-      background: rgba(194, 97, 245, 0.1);
-      color: var(--brand-secondary);
-    }
-
-    .feature-text h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .feature-text p {
-      font-size: 0.9rem;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    @media(max-width: 1023px) {
-      .about-grid { grid-template-columns: 1fr; gap: 4rem; }
-      .about-visuals { height: 500px; }
-      .panel-float { right: 5%; }
-    }
-
-    @media(max-width: 767px) {
-      .about-visuals { height: 400px; display: none; /* Optional: hide complex 3D on very small screens for performance */ }
-      #about-epic { padding: 20rem 0; }
-    }
   </style>
 </head>
 
@@ -2490,7 +1764,6 @@
       <a href="#" class="nav-logo">
         <img src="./logo.png" alt="Digi.Streamline" style="height:50px;width:auto;object-fit:contain;">
         <span class="logo-text">Digi<span>.</span>Streamline</span>
-
       </a>
       <ul class="nav-links">
         <li><a href="#about-epic">About</a></li>
@@ -2570,122 +1843,59 @@
     </div>
   </section>
 
-  <div class="tech-header">
-    <div class="tech-badge">
-      <span class="tech-badge-dot"></span>
-      TRUSTED TECHNOLOGY
-    </div>
-    <h2 class="tech-heading">Powered by the <span class="gradient-text">Best in Tech</span></h2>
-  </div>
-
-  <div class="tech-pills-wrap">
-    <div class="pills-row">
-      <div class="pills-track">
-        <div class="pill-item"><img src="icons/aws.svg" alt="AWS"><span>AWS</span></div>
-        <div class="pill-item"><img src="icons/google-cloud.png" alt="Google Cloud"><span>Google Cloud</span></div>
-        <div class="pill-item"><img src="icons/azure.png" alt="Azure"><span>Azure</span></div>
-        <div class="pill-item"><img src="icons/cloudflare.png" alt="Cloudflare"><span>Cloudflare</span></div>
-        <div class="pill-item"><img src="icons/hetzner.svg" alt="Hetzner"><span>Hetzner</span></div>
-        <div class="pill-item"><img src="icons/digital-ocean.svg" alt="DigitalOcean"><span>DigitalOcean</span></div>
-        <div class="pill-item"><img src="icons/netlify.svg" alt="Netlify"><span>Netlify</span></div>
-        <div class="pill-item"><img src="icons/aws.svg" alt="AWS"><span>AWS</span></div>
-        <div class="pill-item"><img src="icons/google-cloud.png" alt="Google Cloud"><span>Google Cloud</span></div>
-        <div class="pill-item"><img src="icons/azure.png" alt="Azure"><span>Azure</span></div>
-        <div class="pill-item"><img src="icons/cloudflare.png" alt="Cloudflare"><span>Cloudflare</span></div>
-        <div class="pill-item"><img src="icons/hetzner.svg" alt="Hetzner"><span>Hetzner</span></div>
-        <div class="pill-item"><img src="icons/digital-ocean.svg" alt="DigitalOcean"><span>DigitalOcean</span></div>
-        <div class="pill-item"><img src="icons/netlify.svg" alt="Netlify"><span>Netlify</span></div>
+  <section class="tech-section" style="padding-top: 0; padding-bottom: 2rem;">
+    <div class="tech-header">
+      <div class="tech-badge">
+        <span class="tech-badge-dot"></span>
+        TRUSTED TECHNOLOGY
       </div>
+      <h2 class="tech-heading">Powered by the <span class="gradient-text">Best in Tech</span></h2>
     </div>
 
-    <div class="pills-row">
-      <div class="pills-track reverse">
-        <div class="pill-item"><img src="icons/react.svg" alt="React"><span>React</span></div>
-        <div class="pill-item"><img src="icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
-        <div class="pill-item"><img src="icons/figma.svg" alt="Figma"><span>Figma</span></div>
-        <div class="pill-item"><img src="icons/tailwind.svg" alt="Tailwind"><span>Tailwind</span></div>
-        <div class="pill-item"><img src="icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
-        <div class="pill-item"><img src="icons/wordpress.svg" alt="WordPress"><span>WordPress</span></div>
-        <div class="pill-item"><img src="icons/shopify.svg" alt="Shopify"><span>Shopify</span></div>
-        <div class="pill-item"><img src="icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
-        <div class="pill-item"><img src="icons/react.svg" alt="React"><span>React</span></div>
-        <div class="pill-item"><img src="icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
-        <div class="pill-item"><img src="icons/figma.svg" alt="Figma"><span>Figma</span></div>
-        <div class="pill-item"><img src="icons/tailwind.svg" alt="Tailwind"><span>Tailwind</span></div>
-        <div class="pill-item"><img src="icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
-        <div class="pill-item"><img src="icons/wordpress.svg" alt="WordPress"><span>WordPress</span></div>
-        <div class="pill-item"><img src="icons/shopify.svg" alt="Shopify"><span>Shopify</span></div>
-        <div class="pill-item"><img src="icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
+    <div class="tech-pills-wrap">
+      <div class="pills-row">
+        <div class="pills-track">
+          <div class="pill-item"><img src="icons/aws.svg" alt="AWS"><span>AWS</span></div>
+          <div class="pill-item"><img src="icons/google-cloud.png" alt="Google Cloud"><span>Google Cloud</span></div>
+          <div class="pill-item"><img src="icons/azure.png" alt="Azure"><span>Azure</span></div>
+          <div class="pill-item"><img src="icons/cloudflare.png" alt="Cloudflare"><span>Cloudflare</span></div>
+          <div class="pill-item"><img src="icons/hetzner.svg" alt="Hetzner"><span>Hetzner</span></div>
+          <div class="pill-item"><img src="icons/digital-ocean.svg" alt="DigitalOcean"><span>DigitalOcean</span></div>
+          <div class="pill-item"><img src="icons/netlify.svg" alt="Netlify"><span>Netlify</span></div>
+          
+          <div class="pill-item"><img src="icons/aws.svg" alt="AWS"><span>AWS</span></div>
+          <div class="pill-item"><img src="icons/google-cloud.png" alt="Google Cloud"><span>Google Cloud</span></div>
+          <div class="pill-item"><img src="icons/azure.png" alt="Azure"><span>Azure</span></div>
+          <div class="pill-item"><img src="icons/cloudflare.png" alt="Cloudflare"><span>Cloudflare</span></div>
+          <div class="pill-item"><img src="icons/hetzner.svg" alt="Hetzner"><span>Hetzner</span></div>
+          <div class="pill-item"><img src="icons/digital-ocean.svg" alt="DigitalOcean"><span>DigitalOcean</span></div>
+          <div class="pill-item"><img src="icons/netlify.svg" alt="Netlify"><span>Netlify</span></div>
+        </div>
       </div>
-    </div>
-  </div>
 
-
-
-  <section id="about-epic">
-    <div class="about-orb orb-cyan"></div>
-    <div class="about-orb orb-purple"></div>
-    
-    <div class="container">
-      <div class="about-grid">
-        
-        <div class="about-visuals reveal">
-          <div class="glass-panel panel-back"></div>
+      <div class="pills-row">
+        <div class="pills-track reverse">
+          <div class="pill-item"><img src="icons/react.svg" alt="React"><span>React</span></div>
+          <div class="pill-item"><img src="icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
+          <div class="pill-item"><img src="icons/figma.svg" alt="Figma"><span>Figma</span></div>
+          <div class="pill-item"><img src="icons/tailwind.svg" alt="Tailwind"><span>Tailwind</span></div>
+          <div class="pill-item"><img src="icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
+          <div class="pill-item"><img src="icons/wordpress.svg" alt="WordPress"><span>WordPress</span></div>
+          <div class="pill-item"><img src="icons/shopify.svg" alt="Shopify"><span>Shopify</span></div>
+          <div class="pill-item"><img src="icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
           
-          <div class="glass-panel panel-front">
-            <span class="tech-badge" style="width: max-content; margin-bottom: 1rem;">
-              <span class="tech-badge-dot"></span> DIGI.STREAMLINE
-            </span>
-            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Engineering the Modern Web.</h3>
-            <p style="font-size: 0.95rem;">We combine deep technical expertise with relentless creative direction to build digital flagships that command attention.</p>
-            
-            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-              <div style="width: 40px; height: 4px; background: var(--brand-primary); border-radius: 2px;"></div>
-              <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
-              <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
-            </div>
-          </div>
-
-          <div class="panel-float">
-            <h4>4K</h4>
-            <p>Visual Fidelity</p>
-          </div>
+          <div class="pill-item"><img src="icons/react.svg" alt="React"><span>React</span></div>
+          <div class="pill-item"><img src="icons/nextjs.svg" alt="Next.js"><span>Next.js</span></div>
+          <div class="pill-item"><img src="icons/figma.svg" alt="Figma"><span>Figma</span></div>
+          <div class="pill-item"><img src="icons/tailwind.svg" alt="Tailwind"><span>Tailwind</span></div>
+          <div class="pill-item"><img src="icons/typescript.svg" alt="TypeScript"><span>TypeScript</span></div>
+          <div class="pill-item"><img src="icons/wordpress.svg" alt="WordPress"><span>WordPress</span></div>
+          <div class="pill-item"><img src="icons/shopify.svg" alt="Shopify"><span>Shopify</span></div>
+          <div class="pill-item"><img src="icons/nodejs.svg" alt="Node.js"><span>Node.js</span></div>
         </div>
-
-        <div class="about-content">
-          <span class="section-tag reveal">The Agency</span>
-          <h2 class="reveal reveal-delay-1">Beyond Traditional <br><span class="gradient-text">Web Design.</span></h2>
-          <p class="lead reveal reveal-delay-2">
-            At Digi.Streamline, we merge cinematic aesthetics with cutting-edge engineering. We don't just write code, we architect brand experiences designed to captivate and convert from the very first scroll.
-          </p>
-          
-          <div class="feature-list">
-            <div class="feature-item reveal reveal-delay-2">
-              <div class="feature-icon">🧠</div>
-              <div class="feature-text">
-                <h4>AI-Powered Workflows</h4>
-                <p>We leverage advanced AI integrations—from generative visual assets to rapid automated deployment—slashing turnaround times without compromising absolute quality.</p>
-              </div>
-            </div>
-            
-            <div class="feature-item reveal reveal-delay-3">
-              <div class="feature-icon">🎬</div>
-              <div class="feature-text">
-                <h4>Cinematic Digital Direction</h4>
-                <p>Stand out in a sea of templates. We treat UI like a photoshoot, ensuring high-resolution media, editorial lighting, and flawless pixel-perfect precision.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="reveal reveal-delay-4" style="margin-top: 3rem;">
-            <a href="#services" class="btn-secondary">Explore Our Arsenal ↓</a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
-
 
   <section id="services">
     <div class="container">
@@ -2751,7 +1961,6 @@
     </div>
   </section>
 
-
   <section id="process">
     <div class="container">
       <div class="section-center text-center">
@@ -2760,127 +1969,77 @@
             class="gradient-text">A Process That Delivers.</span></h2>
       </div>
 
-      <div class="process-timeline">
+      <div class="process-container">
+        
+        <div class="timeline-track"></div>
+        <div class="timeline-fill"></div>
 
-        <div class="process-item reveal">
-          <div class="process-left">
-            <div class="process-num-wrap">
-              <div class="process-num">01</div>
-              <div class="process-num-glow"></div>
-            </div>
-          </div>
-          <div class="process-line-wrap">
-            <div class="process-line-dot"></div>
-            <div class="process-line-track"></div>
-          </div>
-          <div class="process-right">
-            <div class="process-card">
-              <span class="process-card-tag">Step 01</span>
-              <h3>Discovery</h3>
-              <p>Free audit call. We understand your goals, audience, and competition before writing a single line.</p>
-              <div class="process-card-footer">
-                <span class="process-pill">Free Call</span>
-                <span class="process-pill">Goal Mapping</span>
-              </div>
+        <div class="step-wrapper">
+          <div class="step-dot"></div>
+          <div class="step-card">
+            <div class="step-bg-num">01</div>
+            <span class="process-card-tag">Discovery</span>
+            <h3>Strategic Blueprint</h3>
+            <p>Free audit call. We understand your goals, target audience, and competition before writing a single line of code.</p>
+            <div class="process-card-footer">
+              <span class="process-pill">Free Call</span>
+              <span class="process-pill">Goal Mapping</span>
             </div>
           </div>
         </div>
 
-        <div class="process-item reveal reveal-delay-1">
-          <div class="process-left">
-            <div class="process-num-wrap">
-              <div class="process-num">02</div>
-              <div class="process-num-glow"></div>
-            </div>
-          </div>
-          <div class="process-line-wrap">
-            <div class="process-line-dot"></div>
-            <div class="process-line-track"></div>
-          </div>
-          <div class="process-right">
-            <div class="process-card">
-              <span class="process-card-tag">Step 02</span>
-              <h3>Design</h3>
-              <p>Wireframes & pixel-perfect UI. You approve every screen before we build a single line of code.</p>
-              <div class="process-card-footer">
-                <span class="process-pill">Figma</span>
-                <span class="process-pill">UI/UX</span>
-                <span class="process-pill">Your Approval</span>
-              </div>
+        <div class="step-wrapper">
+          <div class="step-dot"></div>
+          <div class="step-card">
+            <div class="step-bg-num">02</div>
+            <span class="process-card-tag">Design</span>
+            <h3>Visual Architecture</h3>
+            <p>Wireframes & pixel-perfect UI. You approve every screen and interaction before we transition into development.</p>
+            <div class="process-card-footer">
+              <span class="process-pill">Figma Prototyping</span>
+              <span class="process-pill">UX Research</span>
             </div>
           </div>
         </div>
 
-        <div class="process-item reveal reveal-delay-2">
-          <div class="process-left">
-            <div class="process-num-wrap">
-              <div class="process-num">03</div>
-              <div class="process-num-glow"></div>
-            </div>
-          </div>
-          <div class="process-line-wrap">
-            <div class="process-line-dot"></div>
-            <div class="process-line-track"></div>
-          </div>
-          <div class="process-right">
-            <div class="process-card">
-              <span class="process-card-tag">Step 03</span>
-              <h3>Development</h3>
-              <p>Clean, fast, semantic code. Built for performance, accessibility, and scale from the ground up.</p>
-              <div class="process-card-footer">
-                <span class="process-pill">Next.js</span>
-                <span class="process-pill">React</span>
-                <span class="process-pill">Tailwind</span>
-              </div>
+        <div class="step-wrapper">
+          <div class="step-dot"></div>
+          <div class="step-card">
+            <div class="step-bg-num">03</div>
+            <span class="process-card-tag">Development</span>
+            <h3>Engineering & Code</h3>
+            <p>Clean, semantic, lighting-fast code. Built natively for peak performance, extreme scalability, and airtight security.</p>
+            <div class="process-card-footer">
+              <span class="process-pill">Next.js</span>
+              <span class="process-pill">React Ecosystem</span>
             </div>
           </div>
         </div>
 
-        <div class="process-item reveal reveal-delay-3">
-          <div class="process-left">
-            <div class="process-num-wrap">
-              <div class="process-num">04</div>
-              <div class="process-num-glow"></div>
-            </div>
-          </div>
-          <div class="process-line-wrap">
-            <div class="process-line-dot"></div>
-            <div class="process-line-track"></div>
-          </div>
-          <div class="process-right">
-            <div class="process-card">
-              <span class="process-card-tag">Step 04</span>
-              <h3>Testing & QA</h3>
-              <p>Cross-device QA, Lighthouse speed audits, and full accessibility checks before launch day.</p>
-              <div class="process-card-footer">
-                <span class="process-pill">Lighthouse</span>
-                <span class="process-pill">Cross-Device</span>
-                <span class="process-pill">Accessibility</span>
-              </div>
+        <div class="step-wrapper">
+          <div class="step-dot"></div>
+          <div class="step-card">
+            <div class="step-bg-num">04</div>
+            <span class="process-card-tag">Testing</span>
+            <h3>Quality Assurance</h3>
+            <p>Cross-device QA, Lighthouse speed audits, and full accessibility checks to ensure flawless functionality everywhere.</p>
+            <div class="process-card-footer">
+              <span class="process-pill">Lighthouse 100</span>
+              <span class="process-pill">Cross-Browser</span>
             </div>
           </div>
         </div>
 
-        <div class="process-item reveal reveal-delay-4">
-          <div class="process-left">
-            <div class="process-num-wrap">
-              <div class="process-num">05</div>
-              <div class="process-num-glow"></div>
-            </div>
-          </div>
-          <div class="process-line-wrap">
-            <div class="process-line-dot"></div>
-            <div class="process-line-track last"></div>
-          </div>
-          <div class="process-right">
-            <div class="process-card">
-              <span class="process-card-tag">Step 05</span>
-              <h3>Launch & Scale</h3>
-              <p>Go live with confidence. 30-day post-launch support included. We don't disappear after handoff.</p>
-              <div class="process-card-footer">
-                <span class="process-pill">🚀 Go Live</span>
-                <span class="process-pill">30-Day Support</span>
-              </div>
+        <div class="step-wrapper">
+          <div class="step-dot"></div>
+          <div class="step-card">
+            <div class="step-bg-num">05</div>
+            <span class="process-card-tag">Deployment</span>
+            <h3>Launch & Scale</h3>
+            <p>Go live with absolute confidence. 30-day post-launch support included so you're covered when it counts.</p>
+            <div class="process-card-footer">
+              <span class="process-pill">🚀 Go Live</span>
+              <span class="process-pill">30-Day Support</span>
             </div>
           </div>
         </div>
@@ -2889,48 +2048,73 @@
     </div>
   </section>
 
-  <section id="why">
+  <section id="about-epic">
+    <div class="about-orb orb-cyan"></div>
+    <div class="about-orb orb-purple"></div>
+    
     <div class="container">
-      <div class="why-inner">
-        <div class="reveal">
-          <span class="section-tag">Why Choose Us</span>
-          <h2 class="section-headline">Built for Businesses That <span class="gradient-text">Mean Business.</span></h2>
-          <ul class="diff-list">
-            <li><span class="diff-check">✓</span><span>SMB-focused — no enterprise pricing, no enterprise wait
-                times</span></li>
-            <li><span class="diff-check">✓</span><span>One team handles design, dev, and deployment end-to-end</span>
-            </li>
-            <li><span class="diff-check">✓</span><span>Transparent pricing — fixed quotes, no surprises, ever</span>
-            </li>
-            <li><span class="diff-check">✓</span><span>Post-launch support included as standard — not an upsell</span>
-            </li>
-            <li><span class="diff-check">✓</span><span>We build with your long-term growth in mind from day one</span>
-            </li>
-          </ul>
-        </div>
-        <div class="stats-block reveal reveal-delay-2">
-          <div class="stat-item">
-            <div class="stat-num" data-target="50">0</div>
-            <div class="stat-label">Projects Delivered</div>
+      <div class="about-grid">
+        
+        <div class="about-visuals reveal">
+          <div class="glass-panel panel-back"></div>
+          
+          <div class="glass-panel panel-front">
+            <span class="tech-badge" style="width: max-content; margin-bottom: 1rem;">
+              <span class="tech-badge-dot"></span> DIGI.STREAMLINE
+            </span>
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Engineering the Modern Web.</h3>
+            <p style="font-size: 0.95rem;">We combine deep technical expertise with relentless creative direction to build digital flagships that command attention.</p>
+            
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+              <div style="width: 40px; height: 4px; background: var(--brand-primary); border-radius: 2px;"></div>
+              <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+              <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-num" data-target="98">0</div>
-            <div class="stat-label">% Client Satisfaction</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">&lt; 2s</div>
-            <div class="stat-label">Avg. Page Load Time</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num" data-target="30">0</div>
-            <div class="stat-label">Days Avg. Launch Timeline</div>
+
+          <div class="panel-float">
+            <h4>4K</h4>
+            <p>Visual Fidelity</p>
           </div>
         </div>
+
+        <div class="about-content">
+          <span class="section-tag reveal">The Agency</span>
+          <h2 class="reveal reveal-delay-1">Beyond Traditional <br><span class="gradient-text">Web Design.</span></h2>
+          <p class="lead reveal reveal-delay-2">
+            At Digi.Streamline, we merge cinematic aesthetics with cutting-edge engineering. We don't just write code; we architect brand experiences designed to captivate and convert from the very first scroll.
+          </p>
+          
+          <div class="feature-list">
+            <div class="feature-item reveal reveal-delay-2">
+              <div class="feature-icon">🧠</div>
+              <div class="feature-text">
+                <h4>AI-Powered Workflows</h4>
+                <p>We leverage advanced AI integrations—from generative visual assets to rapid automated deployment—slashing turnaround times without compromising absolute quality.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item reveal reveal-delay-3">
+              <div class="feature-icon">🎬</div>
+              <div class="feature-text">
+                <h4>Cinematic Digital Direction</h4>
+                <p>Stand out in a sea of templates. We treat UI like a photoshoot, ensuring high-resolution media, editorial lighting, and flawless pixel-perfect precision.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal reveal-delay-4" style="margin-top: 3rem;">
+            <a href="#services" class="btn-secondary">Explore Our Arsenal ↓</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
   
-  
+
+  <section id="faq">
     <div class="container">
       <div class="section-center text-center">
         <span class="section-tag reveal">FAQ</span>
@@ -2975,33 +2159,33 @@
   </section>
 
   <section id="cta">
-  <div class="container">
-    <div class="cta-panel reveal">
-      <div class="tech-badge" style="margin-bottom:1.5rem">
-        <span class="tech-badge-dot"></span>
-        READY TO START?
-      </div>
-      <h2>Ready to Build Something <span class="gradient-text">Great?</span></h2>
-      <p>Let's talk about your project — free 30-minute consultation, no strings attached.</p>
-      <div class="cta-buttons">
-        <a href="mailto:digi.streamline@gmail.com" class="cta-btn cta-btn-email">
-          <img src="https://img.icons8.com/color/48/gmail-new.png" alt="">
-          digi.streamline@gmail.com
-        </a>
-        <a href="tel:+916294527841" class="cta-btn cta-btn-call">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
-          </svg>
-          Let's Talk
-        </a>
-        <a href="https://wa.me/6294527841" target="_blank" rel="noopener" class="cta-btn cta-btn-whatsapp">
-          <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">
-          WhatsApp
-        </a>
+    <div class="container">
+      <div class="cta-panel reveal">
+        <div class="tech-badge" style="margin-bottom:1.5rem">
+          <span class="tech-badge-dot"></span>
+          READY TO START?
+        </div>
+        <h2>Ready to Build Something <span class="gradient-text">Great?</span></h2>
+        <p>Let's talk about your project — free 30-minute consultation, no strings attached.</p>
+        <div class="cta-buttons">
+          <a href="mailto:digi.streamline@gmail.com" class="cta-btn cta-btn-email">
+            <img src="https://img.icons8.com/color/48/gmail-new.png" alt="">
+            digi.streamline@gmail.com
+          </a>
+          <a href="tel:+916294527841" class="cta-btn cta-btn-call">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
+            </svg>
+            Let's Talk
+          </a>
+          <a href="https://wa.me/6294527841" target="_blank" rel="noopener" class="cta-btn cta-btn-whatsapp">
+            <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <footer>
     <div class="container">
@@ -3014,7 +2198,6 @@
           <p class="footer-tagline">We build the web, so you can build your business. Siliguri, West Bengal — serving
             clients worldwide.</p>
           <div class="social-icons">
-            
             <a href="https://instagram.com/digistreamline" target="_blank" rel="noopener" class="social-icon"
               aria-label="Instagram">
               <img src="https://cdn.simpleicons.org/instagram/E1306C" alt="Instagram">
@@ -3043,7 +2226,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="#why">About Us</a></li>
+            <li><a href="#about-epic">About Us</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#process">Our Process</a></li>
             <li><a href="#pricing">Pricing</a></li>
@@ -3151,38 +2334,32 @@
       });
     });
 
-    // ===== ORBIT ANIMATION ON SCROLL =====
-    const ring = document.getElementById('orbitRing');
-    let currentAngle = 0;
+    // ===== JAW-DROPPING SCROLL TIMELINE =====
+    const timelineFill = document.querySelector('.timeline-fill');
+    const steps = document.querySelectorAll('.step-wrapper');
 
-    window.addEventListener('scroll', () => {
-      const section = document.querySelector('.tech-orbit-wrap');
-      if(section) {
-        const rect = section.getBoundingClientRect();
-        const windowH = window.innerHeight;
-
-        // progress 0 → 1 as section scrolls through viewport
-        const progress = 1 - (rect.top + rect.height) / (windowH + rect.height);
-        const clamped = Math.max(0, Math.min(1, progress));
-
-        // full 360° over the scroll journey
-        currentAngle = clamped * 360;
-        if(ring){
-          ring.style.transform = `rotate(${currentAngle}deg)`;
-          ring.style.animation = 'none'; // disable auto-spin when scroll takes over
-        }
-
-        // counter-rotate each icon to stay upright
-        document.querySelectorAll('.orbit-icon').forEach((el, i) => {
-          el.style.transform = `
-        rotate(${(i * 45) + currentAngle}deg)
-        translateX(240px)
-        rotate(${-((i * 45) + currentAngle)}deg)
-      `;
-          el.style.animation = 'none';
-        });
+    function updateTimeline() {
+      const windowHeight = window.innerHeight;
+      const processSection = document.getElementById('process');
+      
+      if (processSection && timelineFill) {
+        const rect = processSection.getBoundingClientRect();
+        const startOffset = windowHeight / 2;
+        let progress = ((startOffset - rect.top) / rect.height) * 100;
+        progress = Math.max(0, Math.min(progress, 100)); 
+        timelineFill.style.height = progress + '%';
       }
-    });
+
+      steps.forEach(step => {
+        const stepRect = step.getBoundingClientRect();
+        if (stepRect.top < windowHeight * 0.75) {
+          step.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateTimeline);
+    window.addEventListener('load', updateTimeline); 
   </script>
 </body>
 
