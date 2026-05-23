@@ -2239,6 +2239,221 @@
         overflow: hidden;
       }
     }
+
+
+
+
+
+    /* ===== ABOUT SECTION ===== */
+    #about-epic {
+      position: relative;
+      padding: 20rem 0;
+      background: var(--bg-deep);
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Animated Background Orbs */
+    .about-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: -1;
+      animation: float-orb 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .orb-cyan {
+      width: 400px;
+      height: 400px;
+      background: rgba(112, 230, 222, 0.15);
+      top: 10%;
+      left: -10%;
+    }
+
+    .orb-purple {
+      width: 500px;
+      height: 500px;
+      background: rgba(194, 97, 245, 0.12);
+      bottom: -10%;
+      right: -5%;
+      animation-delay: -6s;
+    }
+
+    @keyframes float-orb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-30px, 50px) scale(0.9); }
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    /* Left: Glassmorphic Visual Stack */
+    .about-visuals {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      perspective: 1000px;
+    }
+
+    .glass-panel {
+      position: absolute;
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      overflow: hidden;
+    }
+
+    /* Back Panel */
+    .panel-back {
+      width: 80%;
+      height: 70%;
+      top: 5%;
+      right: 0;
+      background: linear-gradient(135deg, rgba(194, 97, 245, 0.1), rgba(18, 17, 26, 0.8));
+      transform: translateZ(-100px) rotateY(10deg);
+      border-color: rgba(194, 97, 245, 0.2);
+    }
+
+    /* Main Front Panel */
+    .panel-front {
+      width: 85%;
+      height: 80%;
+      bottom: 0;
+      left: 0;
+      background: rgba(18, 17, 26, 0.65);
+      border: 1px solid rgba(112, 230, 222, 0.2);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(112, 230, 222, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+      transform: translateZ(50px) rotateY(5deg);
+    }
+
+    .about-visuals:hover .panel-front {
+      transform: translateZ(80px) rotateY(0deg) scale(1.02);
+      border-color: rgba(112, 230, 222, 0.5);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(112, 230, 222, 0.2);
+    }
+
+    .about-visuals:hover .panel-back {
+      transform: translateZ(-150px) rotateY(15deg) scale(0.95);
+      opacity: 0.6;
+    }
+
+    /* Floating Metric Card */
+    .panel-float {
+      position: absolute;
+      width: auto;
+      top: 40%;
+      right: -10%;
+      background: rgba(11, 10, 16, 0.85);
+      border: 1px solid var(--brand-secondary);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      transform: translateZ(100px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      animation: float-y 4s ease-in-out infinite;
+    }
+
+    .panel-float h4 {
+      font-size: 2rem;
+      color: var(--brand-secondary);
+      margin-bottom: 0.2rem;
+      line-height: 1;
+    }
+    
+    .panel-float p {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0;
+    }
+
+    /* Right: Content */
+    .about-content h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content p.lead {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid transparent;
+      transition: all 0.4s ease;
+    }
+
+    .feature-item:hover {
+      background: rgba(112, 230, 222, 0.05);
+      border-color: rgba(112, 230, 222, 0.2);
+      transform: translateX(10px);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(112, 230, 222, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-primary);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .feature-item:nth-child(2) .feature-icon {
+      background: rgba(194, 97, 245, 0.1);
+      color: var(--brand-secondary);
+    }
+
+    .feature-text h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-text p {
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    @media(max-width: 1023px) {
+      .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+      .about-visuals { height: 500px; }
+      .panel-float { right: 5%; }
+    }
+
+    @media(max-width: 767px) {
+      .about-visuals { height: 400px; display: none; /* Optional: hide complex 3D on very small screens for performance */ }
+      #about-epic { padding: 20rem 0; }
+    }
   </style>
 </head>
 
@@ -2264,7 +2479,7 @@
     <button class="mobile-nav-close" onclick="closeMobile()">✕</button>
     <a href="#services" onclick="closeMobile()">Services</a>
     <a href="#process" onclick="closeMobile()">Process</a>
-    <a href="#why" onclick="closeMobile()">About</a>
+    <a href="#about-epic" onclick="closeMobile()">About</a>
     <a href="#cta" onclick="closeMobile()">Contact</a>
     <a href="#cta" class="btn-primary" style="margin-top:1rem;font-size:1rem;animation:none" onclick="closeMobile()">→
       Get a Free Audit</a>
@@ -2278,7 +2493,7 @@
 
       </a>
       <ul class="nav-links">
-        <li><a href="#why">About</a></li>
+        <li><a href="#about-epic">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Process</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -2404,6 +2619,72 @@
       </div>
     </div>
   </div>
+
+
+
+  <section id="about-epic">
+    <div class="about-orb orb-cyan"></div>
+    <div class="about-orb orb-purple"></div>
+    
+    <div class="container">
+      <div class="about-grid">
+        
+        <div class="about-visuals reveal">
+          <div class="glass-panel panel-back"></div>
+          
+          <div class="glass-panel panel-front">
+            <span class="tech-badge" style="width: max-content; margin-bottom: 1rem;">
+              <span class="tech-badge-dot"></span> DIGI.STREAMLINE
+            </span>
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Engineering the Modern Web.</h3>
+            <p style="font-size: 0.95rem;">We combine deep technical expertise with relentless creative direction to build digital flagships that command attention.</p>
+            
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+              <div style="width: 40px; height: 4px; background: var(--brand-primary); border-radius: 2px;"></div>
+              <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+              <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
+            </div>
+          </div>
+
+          <div class="panel-float">
+            <h4>4K</h4>
+            <p>Visual Fidelity</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag reveal">The Agency</span>
+          <h2 class="reveal reveal-delay-1">Beyond Traditional <br><span class="gradient-text">Web Design.</span></h2>
+          <p class="lead reveal reveal-delay-2">
+            At Digi.Streamline, we merge cinematic aesthetics with cutting-edge engineering. We don't just write code, we architect brand experiences designed to captivate and convert from the very first scroll.
+          </p>
+          
+          <div class="feature-list">
+            <div class="feature-item reveal reveal-delay-2">
+              <div class="feature-icon">🧠</div>
+              <div class="feature-text">
+                <h4>AI-Powered Workflows</h4>
+                <p>We leverage advanced AI integrations—from generative visual assets to rapid automated deployment—slashing turnaround times without compromising absolute quality.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item reveal reveal-delay-3">
+              <div class="feature-icon">🎬</div>
+              <div class="feature-text">
+                <h4>Cinematic Digital Direction</h4>
+                <p>Stand out in a sea of templates. We treat UI like a photoshoot, ensuring high-resolution media, editorial lighting, and flawless pixel-perfect precision.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal reveal-delay-4" style="margin-top: 3rem;">
+            <a href="#services" class="btn-secondary">Explore Our Arsenal ↓</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
   <section id="services">
@@ -2649,7 +2930,7 @@
     </div>
   </section>
 
-  <section id="testimonials">
+  <!-- <section id="testimonials">
     <div class="container">
       <div class="section-center text-center">
         <span class="section-tag reveal">Testimonials</span>
@@ -2701,7 +2982,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+
+
   <section id="faq">
     <div class="container">
       <div class="section-center text-center">
