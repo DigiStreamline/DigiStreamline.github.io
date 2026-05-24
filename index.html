@@ -455,6 +455,7 @@
         opacity: 0;
         transform: translateY(-10px)
       }
+
       to {
         opacity: 1;
         transform: translateY(0)
@@ -570,13 +571,16 @@
     }
 
     @keyframes blob-drift {
+
       0%,
       100% {
         transform: translate(0, 0)
       }
+
       33% {
         transform: translate(20px, -15px)
       }
+
       66% {
         transform: translate(-15px, 20px)
       }
@@ -673,10 +677,12 @@
     }
 
     @keyframes bounce {
+
       0%,
       100% {
         transform: translateY(0)
       }
+
       50% {
         transform: translateY(6px)
       }
@@ -834,10 +840,12 @@
     }
 
     @keyframes float-y {
+
       0%,
       100% {
         transform: translateY(0)
       }
+
       50% {
         transform: translateY(-8px)
       }
@@ -848,6 +856,7 @@
         opacity: 0;
         transform: translateY(24px)
       }
+
       to {
         opacity: 1;
         transform: translateY(0)
@@ -968,6 +977,7 @@
       from {
         transform: translateX(0)
       }
+
       to {
         transform: translateX(-50%)
       }
@@ -977,6 +987,7 @@
       from {
         transform: translateX(-50%)
       }
+
       to {
         transform: translateX(0)
       }
@@ -1023,6 +1034,7 @@
       from {
         transform: translateX(0)
       }
+
       to {
         transform: translateX(-50%)
       }
@@ -1326,12 +1338,15 @@
       .process-item {
         grid-template-columns: 0 32px 1fr;
       }
+
       .process-left {
         display: none;
       }
+
       .process-card {
         padding: 1.4rem;
       }
+
       .process-item:hover .process-card {
         transform: translateX(4px);
       }
@@ -1708,15 +1723,15 @@
     }
 
     .cta-panel {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(112, 230, 222, 0.15);
       border-radius: 28px;
       backdrop-filter: blur(40px) saturate(160%);
       -webkit-backdrop-filter: blur(40px) saturate(160%);
       box-shadow:
         0 0 80px rgba(112, 230, 222, 0.06),
-        0 32px 64px rgba(0,0,0,0.4),
-        inset 0 1px 0 rgba(255,255,255,0.06);
+        0 32px 64px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
       padding: 5rem 4rem;
       text-align: center;
       display: flex;
@@ -1783,17 +1798,17 @@
     }
 
     .cta-btn-call {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
       color: var(--text-primary);
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(12px);
     }
 
     .cta-btn-call:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.3);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
     .cta-btn-whatsapp {
@@ -1803,24 +1818,35 @@
 
     .cta-btn-whatsapp:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
       background: #20bd5a;
     }
 
     @keyframes cta-pulse {
-      0%,100% { opacity: 0.7; transform: translateX(-50%) scale(1) }
-      50%      { opacity: 1;   transform: translateX(-50%) scale(1.05) }
+
+      0%,
+      100% {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(1)
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.05)
+      }
     }
 
     @media(max-width: 767px) {
       .cta-panel {
         padding: 3rem 1.5rem;
       }
+
       .cta-buttons {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
       }
+
       .cta-btn {
         justify-content: center;
       }
@@ -2006,75 +2032,96 @@
       .services-grid {
         grid-template-columns: repeat(2, 1fr)
       }
+
       .portfolio-grid {
         grid-template-columns: repeat(2, 1fr)
       }
+
       .portfolio-card.large {
         grid-row: span 1
       }
+
       .testi-grid {
         grid-template-columns: 1fr 1fr
       }
+
       .pricing-grid {
         grid-template-columns: 1fr
       }
+
       .pricing-card.popular {
         transform: none
       }
+
       .footer-grid {
         grid-template-columns: 1fr 1fr
       }
+
       .why-inner {
         grid-template-columns: 1fr;
         gap: 3rem
       }
+
       .stats-block {
         grid-template-columns: repeat(2, 1fr)
       }
     }
 
     @media(max-width:767px) {
+
       .nav-links,
       .btn-primary.nav-cta {
         display: none
       }
+
       .hamburger {
         display: flex
       }
+
       .hero-inner {
         grid-template-columns: 1fr;
         padding: 7rem 1.5rem 4rem
       }
+
       .hero-right {
         display: none
       }
+
       .services-grid {
         grid-template-columns: 1fr
       }
+
       .portfolio-grid {
         grid-template-columns: 1fr
       }
+
       .process-track {
         flex-direction: column;
         gap: 1rem
       }
+
       .process-connector {
         display: none
       }
+
       .testi-grid {
         grid-template-columns: 1fr
       }
+
       .footer-grid {
         grid-template-columns: 1fr
       }
+
       .footer-bottom {
         flex-direction: column;
         gap: 1rem;
         text-align: center
       }
+
       .cta-panel {
         padding: 3rem 1.5rem
       }
+
       section {
         padding: 4rem 0
       }
@@ -2180,6 +2227,7 @@
       from {
         transform: translateX(0)
       }
+
       to {
         transform: translateX(-50%)
       }
@@ -2189,45 +2237,56 @@
       .process-timeline {
         margin-top: 2.5rem;
       }
+
       .process-item {
         grid-template-columns: 28px 1fr;
         gap: 0;
       }
+
       .process-left {
         display: none;
       }
+
       .process-line-wrap {
         padding-top: 1.6rem;
         padding-right: 1rem;
       }
+
       .process-line-dot {
         width: 8px;
         height: 8px;
       }
+
       .process-right {
         padding: 0 0 2rem 0;
         min-width: 0;
         width: 100%;
       }
+
       .process-card {
         padding: 1.2rem 1.2rem;
         border-radius: 14px;
         width: 100%;
         box-sizing: border-box;
       }
+
       .process-card h3 {
         font-size: 1.1rem;
       }
+
       .process-card p {
         font-size: 0.88rem;
       }
+
       .process-card-footer {
         gap: 6px;
       }
+
       .process-pill {
         font-size: 10px;
         padding: 4px 10px;
       }
+
       .process-item:hover .process-card {
         transform: none;
       }
@@ -2280,9 +2339,19 @@
     }
 
     @keyframes float-orb {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(30px, -50px) scale(1.1); }
-      66% { transform: translate(-30px, 50px) scale(0.9); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(30px, -50px) scale(1.1);
+      }
+
+      66% {
+        transform: translate(-30px, 50px) scale(0.9);
+      }
     }
 
     .about-grid {
@@ -2359,7 +2428,7 @@
       padding: 1.5rem 2rem;
       border-radius: 16px;
       transform: translateZ(100px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       animation: float-y 4s ease-in-out infinite;
     }
 
@@ -2369,7 +2438,7 @@
       margin-bottom: 0.2rem;
       line-height: 1;
     }
-    
+
     .panel-float p {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -2445,19 +2514,37 @@
     }
 
     @media(max-width: 1023px) {
-      .about-grid { grid-template-columns: 1fr; gap: 4rem; }
-      .about-visuals { height: 500px; }
-      .panel-float { right: 5%; }
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .about-visuals {
+        height: 500px;
+      }
+
+      .panel-float {
+        right: 5%;
+      }
     }
 
     @media(max-width: 767px) {
-      .about-visuals { height: 400px; display: none; /* Optional: hide complex 3D on very small screens for performance */ }
-      #about-epic { padding: 20rem 0; }
+      .about-visuals {
+        height: 400px;
+        display: none;
+        /* Optional: hide complex 3D on very small screens for performance */
+      }
+
+      #about-epic {
+        padding: 20rem 0;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <div id="fb-root"></div>
 
   <div id="page-loader">
     <div class="loader-logo">
@@ -2625,20 +2712,21 @@
   <section id="about-epic">
     <div class="about-orb orb-cyan"></div>
     <div class="about-orb orb-purple"></div>
-    
+
     <div class="container">
       <div class="about-grid">
-        
+
         <div class="about-visuals reveal">
           <div class="glass-panel panel-back"></div>
-          
+
           <div class="glass-panel panel-front">
             <span class="tech-badge" style="width: max-content; margin-bottom: 1rem;">
               <span class="tech-badge-dot"></span> DIGI.STREAMLINE
             </span>
             <h3 style="font-size: 2rem; margin-bottom: 1rem;">Engineering the Modern Web.</h3>
-            <p style="font-size: 0.95rem;">We combine deep technical expertise with relentless creative direction to build digital flagships that command attention.</p>
-            
+            <p style="font-size: 0.95rem;">We combine deep technical expertise with relentless creative direction to
+              build digital flagships that command attention.</p>
+
             <div style="margin-top: 2rem; display: flex; gap: 1rem;">
               <div style="width: 40px; height: 4px; background: var(--brand-primary); border-radius: 2px;"></div>
               <div style="width: 10px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;"></div>
@@ -2656,27 +2744,30 @@
           <span class="section-tag reveal">The Agency</span>
           <h2 class="reveal reveal-delay-1">Beyond Traditional <br><span class="gradient-text">Web Design.</span></h2>
           <p class="lead reveal reveal-delay-2">
-            At Digi.Streamline, we merge cinematic aesthetics with cutting-edge engineering. We don't just write code, we architect brand experiences designed to captivate and convert from the very first scroll.
+            At Digi.Streamline, we merge cinematic aesthetics with cutting-edge engineering. We don't just write code,
+            we architect brand experiences designed to captivate and convert from the very first scroll.
           </p>
-          
+
           <div class="feature-list">
             <div class="feature-item reveal reveal-delay-2">
               <div class="feature-icon">🧠</div>
               <div class="feature-text">
                 <h4>AI-Powered Workflows</h4>
-                <p>We leverage advanced AI integrations—from generative visual assets to rapid automated deployment—slashing turnaround times without compromising absolute quality.</p>
+                <p>We leverage advanced AI integrations—from generative visual assets to rapid automated
+                  deployment—slashing turnaround times without compromising absolute quality.</p>
               </div>
             </div>
-            
+
             <div class="feature-item reveal reveal-delay-3">
               <div class="feature-icon">🎬</div>
               <div class="feature-text">
                 <h4>Cinematic Digital Direction</h4>
-                <p>Stand out in a sea of templates. We treat UI like a photoshoot, ensuring high-resolution media, editorial lighting, and flawless pixel-perfect precision.</p>
+                <p>Stand out in a sea of templates. We treat UI like a photoshoot, ensuring high-resolution media,
+                  editorial lighting, and flawless pixel-perfect precision.</p>
               </div>
             </div>
           </div>
-          
+
           <div class="reveal reveal-delay-4" style="margin-top: 3rem;">
             <a href="#services" class="btn-secondary">Explore Our Arsenal ↓</a>
           </div>
@@ -2902,21 +2993,21 @@
             </li>
             <li><span class="diff-check">✓</span><span>Transparent pricing — fixed quotes, no surprises, ever</span>
             </li>
-            <li><span class="diff-check">✓</span><span>Post-launch support included as standard — not an upsell</span>
+            <li><span class="diff-check">✓</span><span>complimentory 1-month free post-launch support included. AMC available thereafter</span>
             </li>
             <li><span class="diff-check">✓</span><span>We build with your long-term growth in mind from day one</span>
             </li>
           </ul>
         </div>
         <div class="stats-block reveal reveal-delay-2">
-          <div class="stat-item">
+          <!-- <div class="stat-item">
             <div class="stat-num" data-target="50">0</div>
             <div class="stat-label">Projects Delivered</div>
           </div>
           <div class="stat-item">
             <div class="stat-num" data-target="98">0</div>
             <div class="stat-label">% Client Satisfaction</div>
-          </div>
+          </div> -->
           <div class="stat-item">
             <div class="stat-num">&lt; 2s</div>
             <div class="stat-label">Avg. Page Load Time</div>
@@ -2929,8 +3020,10 @@
       </div>
     </div>
   </section>
-  
-  
+
+
+
+  <section id="faq">
     <div class="container">
       <div class="section-center text-center">
         <span class="section-tag reveal">FAQ</span>
@@ -2975,33 +3068,35 @@
   </section>
 
   <section id="cta">
-  <div class="container">
-    <div class="cta-panel reveal">
-      <div class="tech-badge" style="margin-bottom:1.5rem">
-        <span class="tech-badge-dot"></span>
-        READY TO START?
-      </div>
-      <h2>Ready to Build Something <span class="gradient-text">Great?</span></h2>
-      <p>Let's talk about your project — free 30-minute consultation, no strings attached.</p>
-      <div class="cta-buttons">
-        <a href="mailto:digi.streamline@gmail.com" class="cta-btn cta-btn-email">
-          <img src="https://img.icons8.com/color/48/gmail-new.png" alt="">
-          digi.streamline@gmail.com
-        </a>
-        <a href="tel:+919749592556" class="cta-btn cta-btn-call">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
-          </svg>
-          Let's Talk
-        </a>
-        <a href="https://wa.me/9749592556" target="_blank" rel="noopener" class="cta-btn cta-btn-whatsapp">
-          <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">
-          WhatsApp
-        </a>
+    <div class="container">
+      <div class="cta-panel reveal">
+        <div class="tech-badge" style="margin-bottom:1.5rem">
+          <span class="tech-badge-dot"></span>
+          READY TO START?
+        </div>
+        <h2>Ready to Build Something <span class="gradient-text">Great?</span></h2>
+        <p>Let's talk about your project — free 30-minute consultation, no strings attached.</p>
+        <div class="cta-buttons">
+          <a href="mailto:digi.streamline@gmail.com" class="cta-btn cta-btn-email">
+            <img src="https://img.icons8.com/color/48/gmail-new.png" alt="">
+            digi.streamline@gmail.com
+          </a>
+          <a href="tel:+919749592556" class="cta-btn cta-btn-call">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" />
+            </svg>
+            Let's Talk
+          </a>
+          <a href="https://wa.me/9749592556" target="_blank" rel="noopener" class="cta-btn cta-btn-whatsapp">
+            <img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">
+            WhatsApp
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <footer>
     <div class="container">
@@ -3014,16 +3109,25 @@
           <p class="footer-tagline">We build the web, so you can build your business. Serving
             clients worldwide.</p>
           <div class="social-icons">
-            
             <a href="https://instagram.com/digi.streamline" target="_blank" rel="noopener" class="social-icon"
               aria-label="Instagram">
               <img src="https://cdn.simpleicons.org/instagram/E1306C" alt="Instagram">
             </a>
-            
+
+            <a href="https://www.facebook.com/DigiStreamline" target="_blank" rel="noopener" class="social-icon"
+              aria-label="Facebook">
+              <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook">
+            </a>
+
             <a href="https://github.com/DigiStreamline" target="_blank" rel="noopener" class="social-icon"
               aria-label="GitHub">
               <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub">
             </a>
+
+            <!-- Facebook Like plugin (renders inline button) -->
+            <div style="display:flex;align-items:center;padding-left:6px;">
+              <div class="fb-like" data-href="https://www.facebook.com/DigiStreamline" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+            </div>
           </div>
         </div>
         <div class="footer-col">
@@ -3041,10 +3145,10 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="#why">About Us</a></li>
+            <li><a href="#about-us">About Us</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#process">Our Process</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <!-- <li><a href="#pricing">Pricing</a></li> -->
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#cta">Contact</a></li>
           </ul>
@@ -3155,7 +3259,7 @@
 
     window.addEventListener('scroll', () => {
       const section = document.querySelector('.tech-orbit-wrap');
-      if(section) {
+      if (section) {
         const rect = section.getBoundingClientRect();
         const windowH = window.innerHeight;
 
@@ -3165,7 +3269,7 @@
 
         // full 360° over the scroll journey
         currentAngle = clamped * 360;
-        if(ring){
+        if (ring) {
           ring.style.transform = `rotate(${currentAngle}deg)`;
           ring.style.animation = 'none'; // disable auto-spin when scroll takes over
         }
@@ -3181,6 +3285,17 @@
         });
       }
     });
+  </script>
+
+  <script>
+    // Load Facebook SDK for Like button
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
 </body>
 
